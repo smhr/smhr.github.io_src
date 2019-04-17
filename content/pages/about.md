@@ -7,6 +7,6 @@ Slug: about
 Authors: Mohammad
 Summary: About me!
 
-I'm Seyed Mohammad Hoseini Rad.
+I'm Seyed Mohammad Hosseinirad.
 
 I'm currently a postdoc researcher at Ferdowsi university of Mashhad.

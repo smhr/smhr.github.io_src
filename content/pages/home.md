@@ -4,7 +4,7 @@ save_as: index.html
 
 
 <div > <img src="/images/smhr_200.jpeg" width="45%" Alt="smhr" style="float:left; padding-left:15px; padding-right:15px; padding-top:0; padding-bottom:15px" />
-I'm Seyed Mohammad Hoseini-Rad. A postdoc researcher at Ferdowsi University of Mashhad. 
+I'm Seyed Mohammad Hosseinirad. A postdoc researcher at Ferdowsi University of Mashhad. 
 
 <!-- ![]({filename}/images/smhr_200.jpeg) -->
 
@@ -20,4 +20,4 @@ Azadi Square, Mashhad, Razavi Khorasan Province, Iran
 
 E-mail: [hosseinirad@um.ac.ir](hosseinirad@um.ac.ir)
 
-Last update: Jan 14, 2019
+Last update: Apr 17, 2019

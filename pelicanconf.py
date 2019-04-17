@@ -5,8 +5,8 @@ from __future__ import unicode_literals
 import os
 ##
 #####################
-AUTHOR = u'S.Mohammad Hoseini-Rad'
-SITENAME = u'S.Mohammad Hoseini-Rad'
+AUTHOR = u'S.Mohammad Hosseinirad'
+SITENAME = u'S.Mohammad Hosseinirad'
 
 TIMEZONE = 'Asia/Tehran'
 DEFAULT_LANG = u'en'
