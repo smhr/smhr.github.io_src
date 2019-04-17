@@ -36,5 +36,4 @@ To logout simply create another script like below:
 ```bash
 #!/bin/bash
 curl --data "username=Username&password=HashedPass" https://hotspot.um.ac.ir/logout > /dev/null
-done
 ```
