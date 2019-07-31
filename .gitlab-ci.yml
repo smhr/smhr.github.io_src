@@ -1,0 +1,12 @@
+image: python:3.6-alpine
+
+before_script:
+  - apt-get update -qq && apt-get install -y -qq pandoc pandoc-citeproc
+
+pages:
+  script:
+  - pip install -r requirements.txt
+  - pelican -s publishconf.py
+  artifacts:
+    paths:
+    - public/
