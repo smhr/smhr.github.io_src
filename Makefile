@@ -4,8 +4,8 @@ PELICANOPTS=--ignore-cache
 
 BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/content
-OUTPUTDIR=$(BASEDIR)/output
-#OUTPUTDIR=$(BASEDIR)/public
+#OUTPUTDIR=$(BASEDIR)/output
+OUTPUTDIR=$(BASEDIR)/public
 CONFFILE=$(BASEDIR)/pelicanconf.py
 ## smhr
 CONFFILETEMP=$(BASEDIR)/pelicanconftemp.py

@@ -2,7 +2,7 @@
 <html lang="en"
 >
 <head>
-    <title>Welcome to My Site - S.Mohammad Hosseinirad</title>
+    <title>Simple script for login to the FUM hotspot. - S.Mohammad Hosseinirad</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -10,16 +10,12 @@
 
 
 
-<link rel="canonical" href="/">
+<link rel="canonical" href="/2019/04/Simple-script-for-login-to-the-FUM-hotspot/">
 
-        <meta name="author" content="S.Mohammad Hosseinirad" />
-        <meta name="description" content="I’m Seyed Mohammad Hosseinirad. A postdoc researcher at Ferdowsi University of Mashhad. Contact Faculty of Science Ferdowsi University of Mashhad Azadi Square, Mashhad, Razavi Khorasan Province, Iran E-mail: hosseinirad@um.ac.ir Last update: Apr 17, 2019" />
+        <meta name="author" content="Mohammad" />
+        <meta name="keywords" content="Gnu/Linux,Bash,FUM" />
+        <meta name="description" content="Script for login to the FUM hotspot" />
 
-    <meta property="og:site_name" content="S.Mohammad Hosseinirad" />
-    <meta property="og:type" content="article"/>
-    <meta property="og:title" content="Welcome to My Site"/>
-    <meta property="og:url" content="/"/>
-    <meta property="og:description" content="I’m Seyed Mohammad Hosseinirad. A postdoc researcher at Ferdowsi University of Mashhad. Contact Faculty of Science Ferdowsi University of Mashhad Azadi Square, Mashhad, Razavi Khorasan Province, Iran E-mail: hosseinirad@um.ac.ir Last update: Apr 17, 2019" />
 
 
     <!-- Bootstrap -->
@@ -52,7 +48,7 @@ S.Mohammad Hosseinirad            </a>
                     <li><a href="/pages/codes.html">Codes</a></li>
                     <li><a href="/pages/publications.html">Publications</a></li>
                     <li><a href="/pages/teaching.html">Teaching</a></li>
-                        <li >
+                        <li class="active">
                             <a href="/category/blog.html">Blog</a>
                         </li>
             </ul>
@@ -68,22 +64,60 @@ S.Mohammad Hosseinirad            </a>
     <div class="row">
         <div class="col-sm-9">
 
-    <section id="content" class="body">
-        <h1 class="entry-title">Welcome to My Site</h1>
-        
-        <div class="entry-content">
-            <div >
-<p><img src="/images/smhr_200.jpeg" width="45%" Alt="smhr" style="float:left; padding-left:15px; padding-right:15px; padding-top:0; padding-bottom:15px" /> I’m Seyed Mohammad Hosseinirad. A postdoc researcher at Ferdowsi University of Mashhad.</p>
-<!-- ![]({filename}/images/smhr_200.jpeg) -->
-<p><br></br> Contact</p>
-<p>Faculty of Science</p>
-<p><a href="http://en.um.ac.ir/">Ferdowsi University of Mashhad</a></p>
-<p>Azadi Square, Mashhad, Razavi Khorasan Province, Iran</p>
-<p>E-mail: <a href="hosseinirad@um.ac.ir" class="uri">hosseinirad@um.ac.ir</a></p>
-<p>Last update: Apr 17, 2019</p>
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="/2019/04/Simple-script-for-login-to-the-FUM-hotspot/"
+                       rel="bookmark"
+                       title="Permalink to Simple script for login to the FUM hotspot.">
+                        Simple script for login to the FUM hotspot.
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2019-04-17T17:43:00+04:30"> Wed 17 April 2019</time>
+    </span>
 
-        </div>
+        <span class="label label-default">Category</span>
+        <a href="/category/blog.html">blog</a>
+
+
+<span class="label label-default">Tags</span>
+	<a href="/tags/gnulinux.html">Gnu/Linux</a>
+        /
+	<a href="/tags/bash.html">Bash</a>
+        /
+	<a href="/tags/fum.html">FUM</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>If you want to simply login to the <a href="http://um.ac.ir/">FUM</a> hotspot, do the followings:</p>
+<p>At first you must compute the MD5 hash of your password:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="bu">echo</span> -n <span class="st">&quot;Password&quot;</span> <span class="kw">|</span> <span class="ex">md5sum</span> <span class="kw">|</span> <span class="fu">awk</span> <span class="st">&#39;{print $1}&#39;</span></a></code></pre></div>
+<p>Please replace the Password with yours.</p>
+<p>Then create a simple bash script:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="co">#!/bin/bash</span></a>
+<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="kw">while</span> <span class="fu">true</span><span class="kw">;</span> <span class="kw">do</span></a>
+<a class="sourceLine" id="cb2-3" data-line-number="3">    <span class="ex">curl</span> --data <span class="st">&quot;username=Username&amp;password=HashedPass&quot;</span> https://hotspot.um.ac.ir/login <span class="op">&gt;</span> /dev/null</a>
+<a class="sourceLine" id="cb2-4" data-line-number="4">    <span class="fu">sleep</span> 100</a>
+<a class="sourceLine" id="cb2-5" data-line-number="5"><span class="kw">done</span></a></code></pre></div>
+<p>You should replase the Username with your FUM one and the HashedPass with the output of the above command.</p>
+<p>You can make this script executable and put it in your binary PATHs (for example ~/bin) for easier life.</p>
+<p>To logout simply create another script like below:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="co">#!/bin/bash</span></a>
+<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="ex">curl</span> --data <span class="st">&quot;username=Username&amp;password=HashedPass&quot;</span> https://hotspot.um.ac.ir/logout <span class="op">&gt;</span> /dev/null</a></code></pre></div>
+
+            </div>
+            <!-- /.entry-content -->
+        </article>
     </section>
+
         </div>
         <div class="col-sm-3" id="sidebar">
             <aside>
