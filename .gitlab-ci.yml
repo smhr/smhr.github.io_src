@@ -1,9 +1,9 @@
-image: python:3.6-alpine
-
+image: xenial:base
 before_script:
   - apt-get update -qq && apt-get install -y -qq pandoc pandoc-citeproc
 
 pages:
+  image: python:3.6-alpine
   script:
   - pip install -r requirements.txt
   - pelican -s publishconf.py
