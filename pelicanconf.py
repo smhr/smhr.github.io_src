@@ -69,11 +69,14 @@ EXTRA_PATH_METADATA = {
 ################### plugins
 PLUGIN_PATHS = ['pelican-plugins']
 
-#PLUGINS = ['pandoc_reader', 'tag_cloud', 'pelican-bibtex']
-PLUGINS = ['tag_cloud', 'pelican-bibtex']
+PLUGINS = ['pandoc_reader', 'tag_cloud', 'pelican-bibtex']
+#PLUGINS = ['tag_cloud', 'pelican-bibtex']
 
 #PANDOC_ARGS = [ '--from=markdown+smart', '--mathjax', '--filter=pandoc-citeproc', '--toc', '--toc-depth=2', '--number-sections', '--bibliography=MYHOMEPAGESRCPATH/references.bib',\
-#  '--csl=MYHOMEPAGESRCPATH/journal-for-the-history-of-astronomy.csl', '--citation-abbreviations=MYHOMEPAGESRCPATH/abbreviation.json']
+  #'--csl=MYHOMEPAGESRCPATH/journal-for-the-history-of-astronomy.csl', '--citation-abbreviations=MYHOMEPAGESRCPATH/abbreviation.json']
+
+PANDOC_ARGS = [ '--from=markdown+smart', '--mathjax', '--filter=pandoc-citeproc', '--toc', '--toc-depth=2', '--number-sections', '--bibliography=references.bib',\
+  '--csl=journal-for-the-history-of-astronomy.csl', '--citation-abbreviations=abbreviation.json']
 
 ###################
 
