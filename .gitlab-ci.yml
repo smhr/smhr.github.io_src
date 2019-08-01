@@ -1,21 +1,14 @@
-image: python:3.6-alpine
+before_script:
+  - apt-get update -qq && apt-get install -y -qq pandoc pandoc-citeproc
 
 pages:
-  stage: test
   image: python:3.6-alpine
   script:
   - pip install -r requirements.txt
-
-pages:
-  stage: deploy
-  script:
-    - pelican -s publishconf.py -D
-    - ls .
-    - mkdir .public
-    - cp -r output/* .public/
-    - mv .public public
+  - pelican -s publishconf.py -D
+  - mkdir .public
+  - cp -r output/* .public/
+  - mv .public public
   artifacts:
     paths:
-      - public
-  only:
-    - master
+    - public/
