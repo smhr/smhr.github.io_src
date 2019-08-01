@@ -1,3 +1,5 @@
+image: python:3.6-alpine
+
 pages:
   stage: test
   image: python:3.6-alpine
