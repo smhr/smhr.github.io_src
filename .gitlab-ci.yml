@@ -5,7 +5,7 @@ pages:
   image: python:3.6-alpine
   script:
   - pip install -r requirements.txt
-  - pelican -s -D publishconf.py
+  - pelican -s publishconf.py -D
   artifacts:
     paths:
     - public/
