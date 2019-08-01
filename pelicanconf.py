@@ -11,7 +11,7 @@ SITENAME = u'S.Mohammad Hosseinirad'
 TIMEZONE = 'Asia/Tehran'
 DEFAULT_LANG = u'en'
 
-SITEURL = ''
+SITEURL = 'https://smhr.gitlab.com'
 PATH = 'content'
 
 # Feed generation is usually not desired when developing

@@ -7,7 +7,7 @@ pages:
   - pip install -r requirements.txt
   - pelican -s publishconf.py -D
   - mkdir .public
-  - cp -r output/* .public/
+  - cp -rv output/* .public/
   - mv .public public
   - ls
   - ls public
