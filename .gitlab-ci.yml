@@ -5,8 +5,8 @@ pages:
   image: python:3.6-alpine
   script:
   - pip install -r requirements.txt
-  - rm -r output
   - pelican -s publishconf.py -D
+  - ls output
   - mkdir .public
   - cp -rv output/* .public/
   - mv .public public
