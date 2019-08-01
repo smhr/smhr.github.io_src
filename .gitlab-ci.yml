@@ -9,6 +9,8 @@ pages:
   - mkdir .public
   - cp -r output/* .public/
   - mv .public public
+  - ls
+  - ls public
   artifacts:
     paths:
     - public/
