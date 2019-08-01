@@ -36,7 +36,7 @@ ifeq ($(DEBUG), 1)
 	PELICANOPTS += -D
 endif
 
-RELATIVE ?= 0
+RELATIVE ?= 1
 ifeq ($(RELATIVE), 1)
 	PELICANOPTS += --relative-urls
 endif
